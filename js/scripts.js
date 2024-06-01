@@ -1,3 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Add any interactive JavaScript code here
+    window.addEventListener('load', () => {
+        const loaderContainer = document.querySelector('.loader-container');
+        loaderContainer.style.display = 'none';
+    });
 });
