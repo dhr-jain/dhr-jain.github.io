@@ -2,12 +2,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
 }
 
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
+    border-radius: 10px; /* Rounded corners */
 }
 
 nav ul {
@@ -25,10 +28,14 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 8px 15px;
+    background-color: #00f; /* Blue buttons */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #007bff; /* Darker blue on hover */
+    text-decoration: none;
 }
 
 main {
@@ -59,12 +66,13 @@ form input, form textarea, form button {
 
 form button {
     margin-top: 20px;
-    background-color: #333;
+    background-color: #00f; /* Blue button */
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: #007bff; /* Darker blue on hover */
 }
