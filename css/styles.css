@@ -61,7 +61,6 @@ nav ul.nav-links {
 
 nav ul li {
     margin: 0 15px;
-    position: relative;
 }
 
 nav ul li a {
@@ -76,24 +75,6 @@ nav ul li a:hover,
 nav ul li a.active {
     background-color: #1E90FF;
     color: #fff;
-}
-
-nav ul li::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: #fff;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    transition: width 0.3s;
-}
-
-nav ul li:hover::after,
-nav ul li a.active::after {
-    width: 50%;
 }
 
 main {
@@ -121,24 +102,6 @@ main {
     font-size: 1.2em;
 }
 
-.section-container {
-    margin-bottom: 40px;
-}
-
-.section-title {
-    font-size: 2em;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.section-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-/* Loader Styles */
 .loader-container {
     position: fixed;
     top: 0;
@@ -183,7 +146,6 @@ main {
     }
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
