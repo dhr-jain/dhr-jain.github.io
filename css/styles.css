@@ -3,13 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff; /* White background */
-    color: #000; /* Black text */
+    background-color: #fff;
+    color: #000;
 }
 
 header {
-    background-color: #000; /* Black background for the header */
-    color: #fff; /* White text */
+    background-color: #000;
+    color: #fff;
     padding: 10px 0;
     position: sticky;
     top: 0;
@@ -39,7 +39,7 @@ nav .logo .nav-toggle {
     font-size: 24px;
     cursor: pointer;
     margin-left: 20px;
-    color: #1E90FF; /* Blue text */
+    color: #1E90FF;
 }
 
 nav ul {
@@ -61,20 +61,39 @@ nav ul.nav-links {
 
 nav ul li {
     margin: 0 15px;
+    position: relative;
 }
 
 nav ul li a {
-    color: #1E90FF; /* Blue text */
+    color: #1E90FF;
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 20px; /* Round buttons */
+    border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    background-color: #1E90FF; /* Blue background on hover and active */
-    color: #fff; /* White text on hover and active */
+    background-color: #1E90FF;
+    color: #fff;
+}
+
+nav ul li::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transition: width 0.3s;
+}
+
+nav ul li:hover::after,
+nav ul li a.active::after {
+    width: 50%;
 }
 
 main {
@@ -102,6 +121,23 @@ main {
     font-size: 1.2em;
 }
 
+.section-container {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
 /* Loader Styles */
 .loader-container {
     position: fixed;
@@ -109,11 +145,11 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff; /* White background to match the site */
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Ensure loader is on top */
+    z-index: 9999;
 }
 
 .loader {
