@@ -10,6 +10,10 @@ header {
     background-color: #000; /* Black background for the header */
     color: #fff; /* White text */
     padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 nav ul {
@@ -17,11 +21,17 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav ul li {
     margin: 0 15px;
+}
+
+nav ul li.logo img {
+    height: 40px;
+    width: auto;
 }
 
 nav ul li a {
@@ -47,6 +57,21 @@ main {
 .hero {
     text-align: center;
     padding: 50px 0;
+    background: linear-gradient(to right, #1E90FF, #5DADE2);
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    transform: perspective(1000px) rotateY(5deg);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
 }
 
 form {
