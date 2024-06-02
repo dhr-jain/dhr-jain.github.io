@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhruv Jain</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
+    <div class="loader-container">
+        <div class="loader">
+            <div class="item" style="--i:1;"></div>
+            <div class="item" style="--i:2;"></div>
+            <div class="item" style="--i:3;"></div>
+        </div>
+    </div>
+
     <header>
         <nav>
             <div class="logo">
@@ -18,7 +27,7 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="path/to/your/cv.pdf" target="_blank">CV</a></li>
+                <li><a href="cv.html">CV</a></li>
                 <li><a href="acadhrix.html">Acadhrix</a></li>
                 <li><a href="research.html">Research & Projects</a></li>
                 <li><a href="explore.html">Explore</a></li>
@@ -26,12 +35,13 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="hero">
-            <h1 id="hero-title">Dhruv Jain</h1>
-            <p>My personal Website destination for all my research, projects, and more.</p>
+            <h1 id="hero-title">Welcome to Dhruv Jain's Website</h1>
+            <p>Explore my world of metallurgy and materials science.</p>
         </section>
+        <!-- Add content for the home page -->
     </main>
-    <script src="js/scripts.js"></script>
 </body>
 </html>
