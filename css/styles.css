@@ -16,6 +16,31 @@ header {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 40px;
+    width: auto;
+}
+
+nav .logo .nav-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 20px;
+    color: #1E90FF; /* Blue text */
+}
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -26,13 +51,15 @@ nav ul {
     flex-wrap: wrap;
 }
 
-nav ul li {
-    margin: 0 15px;
+nav ul.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-nav ul li.logo img {
-    height: 40px;
-    width: auto;
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -158,16 +185,19 @@ form button:hover {
     nav ul {
         flex-direction: column;
         align-items: center;
+        display: none;
+    }
+
+    nav ul.nav-links.active {
+        display: flex;
+    }
+
+    nav .logo .nav-toggle {
+        display: block;
     }
 
     nav ul li {
-        margin: 5px 0;
-    }
-
-    nav ul li.logo {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+        margin: 10px 0;
     }
 
     .hero {
@@ -193,16 +223,19 @@ form button:hover {
     nav ul {
         flex-direction: column;
         align-items: center;
+        display: none;
+    }
+
+    nav ul.nav-links.active {
+        display: flex;
+    }
+
+    nav .logo .nav-toggle {
+        display: block;
     }
 
     nav ul li {
-        margin: 5px 0;
-    }
-
-    nav ul li.logo {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+        margin: 10px 0;
     }
 
     .hero {
@@ -228,16 +261,19 @@ form button:hover {
     nav ul {
         flex-direction: column;
         align-items: center;
+        display: none;
+    }
+
+    nav ul.nav-links.active {
+        display: flex;
+    }
+
+    nav .logo .nav-toggle {
+        display: block;
     }
 
     nav ul li {
-        margin: 5px 0;
-    }
-
-    nav ul li.logo {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+        margin: 10px 0;
     }
 
     .hero {
