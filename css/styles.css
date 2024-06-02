@@ -23,6 +23,7 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -153,14 +154,14 @@ form button:hover {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     nav ul {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 5px 0;
     }
 
     nav ul li.logo {
@@ -171,7 +172,7 @@ form button:hover {
 
     .hero {
         padding: 30px 0;
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     .hero h1 {
@@ -180,6 +181,46 @@ form button:hover {
 
     .hero p {
         font-size: 1em;
+    }
+
+    main {
+        padding: 10px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li.logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero {
+        padding: 20px 0;
+        font-size: 1.2em;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 10px;
+        width: 100%;
     }
 }
 
@@ -205,10 +246,15 @@ form button:hover {
     }
 
     .hero h1 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     .hero p {
-        font-size: 0.9em;
+        font-size: 0.8em;
+    }
+
+    main {
+        padding: 10px;
+        width: 100%;
     }
 }
