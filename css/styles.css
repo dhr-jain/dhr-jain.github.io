@@ -1,3 +1,4 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -90,7 +91,6 @@ main {
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     margin-bottom: 20px;
-    transform: perspective(1000px) rotateY(5deg);
 }
 
 .hero h1 {
@@ -100,39 +100,6 @@ main {
 
 .hero p {
     font-size: 1.2em;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin-top: 10px;
-}
-
-form input, form textarea, form button {
-    margin-top: 5px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-form input, form textarea {
-    border: 1px solid #1E90FF; /* Blue border */
-    background-color: #fff; /* White background */
-    color: #000; /* Black text */
-}
-
-form button {
-    background-color: #1E90FF; /* Blue background */
-    color: #fff; /* White text */
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #5DADE2; /* Lighter blue on hover */
 }
 
 /* Loader Styles */
@@ -181,7 +148,7 @@ form button:hover {
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -219,44 +186,6 @@ form button:hover {
     }
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        display: none;
-    }
-
-    nav ul.nav-links.active {
-        display: flex;
-    }
-
-    nav .logo .nav-toggle {
-        display: block;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero {
-        padding: 20px 0;
-        font-size: 1.2em;
-    }
-
-    .hero h1 {
-        font-size: 1.5em;
-    }
-
-    .hero p {
-        font-size: 0.9em;
-    }
-
-    main {
-        padding: 10px;
-        width: 100%;
-    }
-}
-
 @media (max-width: 480px) {
     nav ul {
         flex-direction: column;
@@ -282,11 +211,11 @@ form button:hover {
     }
 
     .hero h1 {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     .hero p {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
     main {
