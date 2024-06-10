@@ -1,5 +1,190 @@
-/* Existing CSS here */
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
 
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+	@@ -39,7 +39,7 @@ nav .logo .nav-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 20px;
+    color: #1E90FF;
+}
+
+nav ul {
+	@@ -61,20 +61,39 @@ nav ul.nav-links {
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #1E90FF;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #1E90FF;
+    color: #fff;
+}
+
+nav ul li::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transition: width 0.3s;
+}
+
+nav ul li:hover::after,
+nav ul li a.active::after {
+    width: 50%;
+}
+
+main {
+	@@ -102,18 +121,35 @@ main {
+    font-size: 1.2em;
+}
+
+.section-container {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Loader Styles */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    display: flex;
+    gap: 20px;
+}
+.item {
+    position: absolute;
+    background-color: transparent;
+    width: calc(var(--i) * 2.5vmin);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: .9vmin solid rgb(0, 200, 255);
+    transform-style: preserve-3d;
+    transform: rotateX(70deg) translateZ(50px);
+    animation: my-move 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+    box-shadow: 0px 0px 15px rgb(124, 124, 124),
+                inset 0px 0px 15px rgb(124, 124, 124);
+}
+@keyframes my-move {
+    0%,
+    100% {
+        transform: rotateX(70deg) translateZ(50px) translateY(0px);
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+        filter: hue-rotate(180deg);
+    }
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+    nav ul.nav-links.active {
+        display: flex;
+    }
+    nav .logo .nav-toggle {
+        display: block;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .hero {
+        padding: 30px 0;
+        font-size: 1.5em;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    main {
+        padding: 10px;
+        width: 90%;
+    }
+}
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+    nav ul.nav-links.active {
+        display: flex;
+    }
+    nav .logo .nav-toggle {
+        display: block;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .hero {
+        padding: 20px 0;
+        font-size: 1em;
+    }
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    .hero p {
+        font-size: 0.9em;
+    }
+    main {
+        padding: 10px;
+        width: 100%;
+    }
+}
 header {
     background-color: #000;
     color: #fff;
