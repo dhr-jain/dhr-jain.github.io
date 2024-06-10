@@ -1,227 +1,56 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #000;
-}
+/* Existing CSS here */
 
 header {
     background-color: #000;
     color: #fff;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 10px 20px;
 }
 
 nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
-}
-
-nav .logo {
-    display: flex;
     align-items: center;
 }
 
 nav .logo img {
-    height: 40px;
-    width: auto;
+    height: 50px;
 }
 
-nav .logo .nav-toggle {
+.menu-icon {
     display: none;
-    font-size: 24px;
+    flex-direction: column;
     cursor: pointer;
-    margin-left: 20px;
-    color: #1E90FF;
 }
 
-nav ul {
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: #1E90FF;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+ul {
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
 
-nav ul.nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-nav ul li {
+ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
+ul li a {
     color: #1E90FF;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    background-color: #1E90FF;
-    color: #fff;
-}
-
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero {
-    text-align: center;
-    padding: 50px 0;
-    background: linear-gradient(to right, #1E90FF, #5DADE2);
-    color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: 3em;
-    margin: 0;
-}
-
-.hero p {
     font-size: 1.2em;
+    transition: color 0.3s;
 }
 
-.loader-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+ul li a:hover, ul li a.active {
+    color: #fff;
 }
-
-.loader {
-    display: flex;
-    gap: 20px;
-}
-
-.item {
-    position: absolute;
-    background-color: transparent;
-    width: calc(var(--i) * 2.5vmin);
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border: .9vmin solid rgb(0, 200, 255);
-    transform-style: preserve-3d;
-    transform: rotateX(70deg) translateZ(50px);
-    animation: my-move 3s ease-in-out calc(var(--i) * 0.08s) infinite;
-    box-shadow: 0px 0px 15px rgb(124, 124, 124),
-                inset 0px 0px 15px rgb(124, 124, 124);
-}
-
-@keyframes my-move {
-    0%,
-    100% {
-        transform: rotateX(70deg) translateZ(50px) translateY(0px);
-        filter: hue-rotate(0deg);
-    }
-    50% {
-        transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
-        filter: hue-rotate(180deg);
-    }
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        display: none;
-    }
-
-    nav ul.nav-links.active {
-        display: flex;
-    }
-
-    nav .logo .nav-toggle {
-        display: block;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero {
-        padding: 30px 0;
-        font-size: 1.5em;
-    }
-
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
-
-    main {
-        padding: 10px;
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        display: none;
-    }
-
-    nav ul.nav-links.active {
-        display: flex;
-    }
-
-    nav .logo .nav-toggle {
-        display: block;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero {
-        padding: 20px 0;
-        font-size: 1em;
-    }
-
-    .hero h1 {
-        font-size: 1.5em;
-    }
-
-    .hero p {
-        font-size: 0.9em;
-    }
-
-    main {
-        padding: 10px;
-        width: 100%;
-    }
-}
-/* Existing CSS here */
 
 footer {
     background-color: #000;
@@ -262,4 +91,33 @@ footer {
 
 .social-links img:hover {
     transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #000;
+    }
+
+    ul.show {
+        display: flex;
+    }
+
+    ul li {
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    ul li a {
+        width: 100%;
+        padding: 10px 0;
+    }
 }
